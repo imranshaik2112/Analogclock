@@ -1,0 +1,258 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw ;
+}
+
+.con {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background: linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
+}
+
+h1 {
+  font-size: 45px;
+  color: lightseagreen;
+  text-shadow: 0px 0px 10px black;
+}
+
+.clock {
+  height: 400px;
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
+  font-size: 24px;
+  background-image: radial-gradient(
+      circle at 67% 83%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 1%,
+      transparent 1%,
+      transparent 5%,
+      transparent 5%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 24% 80%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 27%,
+      transparent 27%,
+      transparent 63%,
+      transparent 63%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 23% 5%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 26%,
+      transparent 26%,
+      transparent 82%,
+      transparent 82%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 21% 11%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 35%,
+      transparent 35%,
+      transparent 45%,
+      transparent 45%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 10% 11%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 21%,
+      transparent 21%,
+      transparent 81%,
+      transparent 81%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 19% 61%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 20%,
+      transparent 20%,
+      transparent 61%,
+      transparent 61%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 13% 77%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 63%,
+      transparent 63%,
+      transparent 72%,
+      transparent 72%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 30% 93%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 33%,
+      transparent 33%,
+      transparent 82%,
+      transparent 82%,
+      transparent 100%
+    ),
+    linear-gradient(90deg, rgb(22, 176, 207), rgb(103, 7, 215));
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+}
+
+.clock div:first-child {
+  position: absolute;
+  top: 50px;
+  left: 275px;
+}
+
+.clock div:nth-child(12) {
+  position: absolute;
+  top: 25px;
+  left: 48%;
+}
+
+.clock div:nth-child(2) {
+  position: absolute;
+  top: 100px;
+  left: 330px;
+}
+
+.clock div:nth-child(3) {
+  position: absolute;
+  top: 170px;
+  left: 350px;
+}
+
+.clock div:nth-child(4) {
+  position: absolute;
+  top: 250px;
+  left: 330px;
+}
+
+.clock div:nth-child(5) {
+  position: absolute;
+  top: 315px;
+  left: 280px;
+}
+
+.clock div:nth-child(6) {
+  position: absolute;
+  top: 340px;
+  left: 48%;
+}
+
+.clock div:nth-child(7) {
+  position: absolute;
+  top: 315px;
+  left: 110px;
+}
+
+.clock div:nth-child(8) {
+  position: absolute;
+  top: 250px;
+  left: 60px;
+}
+
+.clock div:nth-child(9) {
+  position: absolute;
+  top: 170px;
+  left: 35px;
+}
+
+.clock div:nth-child(10) {
+  position: absolute;
+  top: 100px;
+  left: 60px;
+}
+
+.clock div:nth-child(11) {
+  position: absolute;
+  top: 50px;
+  left: 110px;
+}
+
+.cen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 12px;
+  width: 12px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.s-needle {
+  position: absolute;
+  top: 25.3%;
+  left: 49%;
+  height: 100px;
+  width: 5px;
+  background-color: rgb(0, 0, 0);
+  transform: rotate(10deg);
+  transform-origin: bottom;
+  z-index: 1;
+}
+
+.s-needle::before {
+  position: absolute;
+  top: -5px;
+  left: -2.2px;
+  content: "";
+  height: 0px;
+  width: 0px;
+  border: 5px solid transparent;
+  border-top: 0;
+  border-color: transparent;
+  border-bottom: 5px solid rgb(0, 0, 0);
+}
+
+.l-needle {
+  position: absolute;
+  top: 16%;
+  left: 49.5%;
+  height: 140px;
+  width: 5px;
+  background-color: rgb(0, 0, 0);
+  transform: rotate(30deg);
+  transform-origin: bottom;
+  z-index: 1;
+}
+
+.l-needle::before {
+  position: absolute;
+  top: -5px;
+  left: -2.2px;
+  content: "";
+  height: 0px;
+  width: 0px;
+  border: 5px solid transparent;
+  border-top: 0;
+  border-color: transparent;
+  border-bottom: 5px solid rgb(0, 0, 0);
+}
+
+.sec {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  height: 160px;
+  width: 2px;
+  background-color: black;
+  transform: rotate(155deg);
+  transform-origin: bottom;
+  z-index: 1;
+}
